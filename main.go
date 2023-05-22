@@ -17,7 +17,7 @@ func main() {
 		StartTime: t,
 	})
 
-	h := server.Default(server.WithHostPorts("127.0.0.1:4396"))
+	h := server.Default(server.WithHostPorts(":4396"))
 
 	h.GET("/ping", func(c context.Context, ctx *app.RequestContext) {
 		ctx.JSON(consts.StatusOK, utils.H{"message": "pong"})
