@@ -1,0 +1,9 @@
+version: '3.0'
+
+services:
+  toolkit:
+    build:
+      context: .
+    image: toolkit
+    container_name: toolkit-container
+    network_mode: host
